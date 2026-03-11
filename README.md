@@ -13,9 +13,12 @@ Službena web stranica Padel Kluba Rapsodija. Stranica je izrađena kao jednosta
 
 ```
 pk-rapsodija/
-├── index.html      # Glavna stranica
-├── style.css       # Stilovi
-└── README.md       # Ovaj fajl
+├── index.html          # Glavna stranica
+├── style.css           # Stilovi
+├── main.js             # JavaScript
+├── padel_rapsodija.jpg # Veliki logo (hero sekcija)
+├── padelRaps.jpg       # Mali logo (navigacija)
+└── README.md           # Ovaj fajl
 ```
 
 ## Sadržaj stranice
