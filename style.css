@@ -569,90 +569,128 @@ section {
   font-size: 0.93rem;
 }
 
-/* --- Schedule --- */
-.schedule {
-  background: var(--dark);
+/* --- HPS Liga & Turniri --- */
+.hps {
+  background: var(--white);
+}
+
+.hps-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: var(--primary-light);
+  border: 1px solid rgba(34,197,94,0.2);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin-bottom: 48px;
+}
+
+.hps-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
   color: var(--white);
-  position: relative;
-  overflow: hidden;
-}
-
-.schedule::before {
-  content: '';
-  position: absolute;
-  top: -200px;
-  right: -200px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(34,197,94,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.schedule .section-title {
-  color: var(--white);
-}
-
-.schedule .section-label {
-  background: rgba(34,197,94,0.15);
-  color: var(--primary);
-}
-
-.schedule-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 6px;
-}
-
-.schedule-table th {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--light-mid);
-  text-align: left;
-  padding: 12px 20px;
-  font-weight: 600;
-}
-
-.schedule-table td {
-  padding: 18px 20px;
-  font-size: 0.93rem;
-  color: rgba(255,255,255,0.65);
-  background: rgba(255,255,255,0.03);
-}
-
-.schedule-table td:first-child {
-  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
-}
-
-.schedule-table td:last-child {
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-}
-
-.schedule-table tr:hover td {
-  background: rgba(34,197,94,0.06);
-  color: rgba(255,255,255,0.85);
-}
-
-.schedule-table .day {
-  font-weight: 700;
-  color: var(--white);
-}
-
-.schedule-tag {
-  display: inline-block;
-  padding: 4px 14px;
+  padding: 8px 16px;
   border-radius: 100px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.tag-open    { background: rgba(34,197,94,0.15);   color: #4ADE80; }
-.tag-liga    { background: rgba(249,115,22,0.15);   color: #FB923C; }
-.tag-trening { background: rgba(99,179,237,0.15);   color: #60A5FA; }
-.tag-social  { background: rgba(232,121,249,0.15);  color: #E879F9; }
+.hps-intro p {
+  color: var(--mid);
+  line-height: 1.8;
+  font-size: 0.97rem;
+}
+
+.hps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.hps-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  transition: all var(--transition);
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.hps-card:hover {
+  background: var(--white);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.hps-card-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--primary-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary-dark);
+  transition: all var(--transition);
+}
+
+.hps-card:hover .hps-card-icon {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.hps-card-body {
+  flex: 1;
+}
+
+.hps-card-body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--dark);
+}
+
+.hps-card-body p {
+  font-size: 0.85rem;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+.hps-card-arrow {
+  color: var(--light-mid);
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.hps-card:hover .hps-card-arrow {
+  color: var(--primary-dark);
+  transform: translateX(4px);
+}
+
+.hps-cta {
+  text-align: center;
+}
+
+.hps-cta .btn {
+  margin-bottom: 14px;
+}
+
+.hps-cta p {
+  color: var(--light-mid);
+  font-size: 0.87rem;
+}
+
 
 /* --- CTA Banner --- */
 .cta-banner {
