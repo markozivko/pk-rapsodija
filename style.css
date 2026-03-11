@@ -84,7 +84,7 @@ ul { list-style: none; }
 }
 
 .nav-logo img {
-  height: 44px;
+  height: 60px;
   width: auto;
 }
 
@@ -240,6 +240,7 @@ ul { list-style: none; }
   opacity: 0;
   animation: fadeUp 0.8s ease-out 0.2s forwards;
   filter: drop-shadow(0 8px 32px rgba(34,197,94,0.2));
+  border-radius: 20px;
 }
 
 .hero h1 {
