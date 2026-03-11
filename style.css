@@ -586,6 +586,71 @@ section {
   font-size: 0.93rem;
 }
 
+/* --- Counter Banner --- */
+.counter-banner {
+  background: var(--dark);
+  padding: 64px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.counter-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 10% 50%, rgba(34,197,94,0.08), transparent),
+    radial-gradient(ellipse 40% 60% at 90% 50%, rgba(34,197,94,0.06), transparent);
+  pointer-events: none;
+}
+
+.counter-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.counter-item {
+  text-align: center;
+  padding: 20px 52px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.counter-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -2px;
+}
+
+.counter-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.counter-divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .counter-grid    { gap: 0; }
+  .counter-item    { padding: 20px 24px; min-width: 140px; flex: 0 0 50%; }
+  .counter-divider { display: none; }
+}
+
 /* --- HPS Liga & Turniri --- */
 .hps {
   background: var(--white);
