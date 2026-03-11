@@ -773,6 +773,7 @@ section {
 /* --- Contact --- */
 .contact {
   background: var(--light);
+  overflow: hidden;
 }
 
 .contact-grid {
@@ -1064,6 +1065,9 @@ section {
   .footer-bottom   { flex-direction: column; gap: 16px; align-items: center; text-align: center; }
   .hero-logo-large { height: 120px; }
   .hero h1         { letter-spacing: -1px; }
+
+  .contact-grid    { gap: 32px; }
+  .contact-form    { padding: 20px; border-radius: var(--radius); }
 
   .hps-intro {
     flex-direction: column;
