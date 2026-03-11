@@ -1047,4 +1047,19 @@ section {
   .footer-bottom   { flex-direction: column; gap: 16px; align-items: center; text-align: center; }
   .hero-logo-large { height: 120px; }
   .hero h1         { letter-spacing: -1px; }
+
+  .hps-intro {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .hps-badge {
+    white-space: normal;
+    align-self: flex-start;
+  }
+
+  .hps-grid {
+    grid-template-columns: 1fr;
+  }
 }
