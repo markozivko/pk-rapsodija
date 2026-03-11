@@ -26,7 +26,18 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -35,6 +46,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+
 
 img { display: block; max-width: 100%; }
 a { text-decoration: none; }
@@ -249,13 +261,16 @@ ul { list-style: none; }
 }
 
 .hero-sub {
-  font-size: clamp(4rem, 11vw, 9rem);
+  font-size: clamp(3rem, 11vw, 9rem);
   font-weight: 800;
   color: var(--white);
   letter-spacing: -3px;
   text-transform: uppercase;
   line-height: 0.95;
   margin-bottom: 32px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
   opacity: 0;
   animation: fadeUp 0.8s ease-out 0.4s forwards;
 }
@@ -377,6 +392,7 @@ section {
 /* --- About --- */
 .about {
   background: var(--light);
+  overflow: hidden;
 }
 
 .about-grid {
