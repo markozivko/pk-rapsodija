@@ -60,6 +60,27 @@ const counterBanner = document.querySelector('.counter-banner');
 if (counterBanner) counterObserver.observe(counterBanner);
 
 // Form submit
-document.getElementById('formSubmit').addEventListener('click', () => {
-  alert('Hvala na poruci! Javit ćemo vam se uskoro. 🎾');
-});
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = document.getElementById('formSubmit');
+    btn.textContent = 'Šaljem...';
+    btn.disabled = true;
+
+    const res = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      contactForm.reset();
+      document.getElementById('formSuccess').style.display = 'block';
+      btn.textContent = 'Poslano!';
+    } else {
+      btn.textContent = 'Greška — pokušaj ponovno';
+      btn.disabled = false;
+    }
+  });
+}
